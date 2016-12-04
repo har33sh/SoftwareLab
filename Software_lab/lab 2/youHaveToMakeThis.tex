@@ -1,0 +1,1542 @@
+%% ================================================================================
+%% This LaTeX file was created by AbiWord.                                         
+%% AbiWord is a free, Open Source word processor.                                  
+%% More information about AbiWord is available at http://www.abisource.com/        
+%% ================================================================================
+
+\documentclass[a4paper,portrait,12pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{calc}
+\usepackage{setspace}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage[normalem]{ulem}
+%% Please revise the following command, if your babel
+%% package does not support en-IN
+\usepackage[en]{babel}
+\usepackage{color}
+\usepackage{hyperref}
+ 
+\begin{document}
+
+
+\begin{flushleft}
+Introduction to Latex
+\end{flushleft}
+
+
+\begin{flushleft}
+M Nagaraju and Sankalp Rangare
+\end{flushleft}
+
+
+\begin{flushleft}
+July 27, 2016
+\end{flushleft}
+
+
+
+
+
+1
+
+
+
+
+
+\begin{flushleft}
+\newpage
+Contents
+\end{flushleft}
+
+
+\begin{flushleft}
+1 About Latex
+\end{flushleft}
+
+
+
+
+
+3
+
+
+
+
+
+\begin{flushleft}
+2 Opening and Compiling Tex Document
+\end{flushleft}
+
+
+\begin{flushleft}
+2.1 Starting and Ending . . . . . . . . . . . . . . . . . . . . . . .
+\end{flushleft}
+
+
+\begin{flushleft}
+2.2 Compiling the LaTeX Document . . . . . . . . . . . . . . . . .
+\end{flushleft}
+
+
+
+
+
+4
+
+
+4
+
+
+4
+
+
+
+
+
+\begin{flushleft}
+3 Section
+\end{flushleft}
+
+
+
+
+
+5
+
+
+
+
+
+\begin{flushleft}
+4 Cross Reference
+\end{flushleft}
+
+
+\begin{flushleft}
+4.1 \ensuremath{\backslash}label\{key\} . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+\end{flushleft}
+
+
+\begin{flushleft}
+4.2 \ensuremath{\backslash}pageref\{key\} . . . . . . . . . . . . . . . . . . . . . . . . . . .
+\end{flushleft}
+
+
+\begin{flushleft}
+4.3 \ensuremath{\backslash}ref\{key\} . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+\end{flushleft}
+
+
+
+
+
+6
+
+
+6
+
+
+7
+
+
+7
+
+
+
+
+
+\begin{flushleft}
+5 Fonts
+\end{flushleft}
+
+
+\begin{flushleft}
+5.1 Font Styles . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+\end{flushleft}
+
+
+\begin{flushleft}
+5.2 Font Sizes . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+\end{flushleft}
+
+
+
+
+
+7
+
+
+7
+
+
+8
+
+
+
+
+
+\begin{flushleft}
+6 Images
+\end{flushleft}
+
+
+
+
+
+8
+
+
+
+
+
+\begin{flushleft}
+7 Tables
+\end{flushleft}
+
+
+9
+
+
+\begin{flushleft}
+7.1 Multi Row Tables . . . . . . . . . . . . . . . . . . . . . . . . . 9
+\end{flushleft}
+
+
+\begin{flushleft}
+7.2 Table of Figures . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+\end{flushleft}
+
+
+\begin{flushleft}
+8 Conclusion
+\end{flushleft}
+
+
+
+
+
+11
+
+
+
+
+
+2
+
+
+
+
+
+\newpage
+1
+
+
+
+
+
+\begin{flushleft}
+About Latex
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+LaTeX is a word processor and document markup language. It is distinguished from typical word processors such as Microsoft Word and Apple
+\end{flushleft}
+
+
+\begin{flushleft}
+Pages in that the writer uses plain text as opposed to formatted text, relying
+\end{flushleft}
+
+
+\begin{flushleft}
+on markup tagging conventions to define the general structure of a document
+\end{flushleft}
+
+
+\begin{flushleft}
+(such as article, book, and letter), to stylise text throughout a document
+\end{flushleft}
+
+
+\begin{flushleft}
+(such as bold and italic), and to add citations and cross-referencing. A TeX
+\end{flushleft}
+
+
+\begin{flushleft}
+distribution such as TeXlive or MikTeX is used to produce an output file
+\end{flushleft}
+
+
+\begin{flushleft}
+(such as PDF or DVI) suitable for printing or digital distribution.
+\end{flushleft}
+
+
+\begin{flushleft}
+LaTeX is used for the communication and publication of scientific documents in many fields, including mathematics, physics, computer science,
+\end{flushleft}
+
+
+\begin{flushleft}
+statistics, economics, and political science.It also has a prominent role in
+\end{flushleft}
+
+
+\begin{flushleft}
+the preparation and publication of books and articles that contain complex
+\end{flushleft}
+
+
+\begin{flushleft}
+multilingual materials, such as Sanskrit and Arabic. LaTeX uses the TeX
+\end{flushleft}
+
+
+\begin{flushleft}
+typesetting program for formatting its output, and is itself written in the
+\end{flushleft}
+
+
+\begin{flushleft}
+TeX macro language.
+\end{flushleft}
+
+
+\begin{flushleft}
+LaTeX is widely used in academia. LaTeX can be used as a standalone
+\end{flushleft}
+
+
+\begin{flushleft}
+document preparation system, or as an intermediate format. In the latter role, for example, it is often used as part of a pipeline for translating
+\end{flushleft}
+
+
+\begin{flushleft}
+DocBook and other XML-based formats to PDF. The typesetting system
+\end{flushleft}
+
+
+\begin{flushleft}
+offers programmable desktop publishing features and extensive facilities for
+\end{flushleft}
+
+
+\begin{flushleft}
+automating most aspects of typesetting and desktop publishing, including
+\end{flushleft}
+
+
+\begin{flushleft}
+numbering and cross-referencing of tables and figures, chapter and section
+\end{flushleft}
+
+
+\begin{flushleft}
+headings, the inclusion of graphics, page layout, indexing and bibliographies.
+\end{flushleft}
+
+
+\begin{flushleft}
+Like TeX, LaTeX started as a writing tool for mathematicians and computer scientists, but from early in its development it has also been taken
+\end{flushleft}
+
+
+\begin{flushleft}
+up by scholars who needed to write documents that include complex math
+\end{flushleft}
+
+
+\begin{flushleft}
+expressions or non-Latin scripts, such as Arabic, Sanskrit and Chinese.
+\end{flushleft}
+
+
+\begin{flushleft}
+LaTeX is intended to provide a high-level language that accesses the
+\end{flushleft}
+
+
+\begin{flushleft}
+power of TeX. LaTeX comprises a collection of TeX macros and a program to process LaTeX documents. Because the plain TeX formatting
+\end{flushleft}
+
+
+\begin{flushleft}
+commands are elementary, it provides authors with ready-made commands
+\end{flushleft}
+
+
+3
+
+
+
+
+
+\begin{flushleft}
+\newpage
+for formatting and layout requirements such as chapter headings, footnotes,
+\end{flushleft}
+
+
+\begin{flushleft}
+cross-references and bibliographies.
+\end{flushleft}
+
+
+\begin{flushleft}
+LaTeX was originally written in the early 1980s by Leslie Lamport at
+\end{flushleft}
+
+
+\begin{flushleft}
+SRI International. The current version is LaTeX2e. LaTeX is free software
+\end{flushleft}
+
+
+\begin{flushleft}
+and is distributed under the LaTeX Project Public License (LPPL) (Source
+\end{flushleft}
+
+
+\begin{flushleft}
+Wikipedia).
+\end{flushleft}
+
+
+
+
+
+2
+
+
+
+
+
+\begin{flushleft}
+Opening and Compiling Tex Document
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+First create a .tex file using text editor such as Vi or Gedit or Kile.
+\end{flushleft}
+
+
+
+
+
+2.1
+
+
+
+
+
+\begin{flushleft}
+Starting and Ending
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+A minimal input file looks like following
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}documentclass\{class\}
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}begin\{document\}
+\end{flushleft}
+
+
+\begin{flushleft}
+your text...
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}end \{document\}
+\end{flushleft}
+
+
+\begin{flushleft}
+where the class is a valid document class for LaTeX.
+\end{flushleft}
+
+
+
+
+
+2.2
+
+
+
+
+
+\begin{flushleft}
+Compiling the LaTeX Document
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+We open the terminal and go to the directory in which our .tex file is stored
+\end{flushleft}
+
+
+\begin{flushleft}
+and the we execute the command
+\end{flushleft}
+
+
+\begin{flushleft}
+pdflatex example.tex
+\end{flushleft}
+
+
+
+
+
+4
+
+
+
+
+
+\newpage
+3
+
+
+
+
+
+\begin{flushleft}
+Section
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+Sectioning commands provide the means to structure your text into units:
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}part
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}chapter
+\end{flushleft}
+
+
+\begin{flushleft}
+(report and book class only)
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}section
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}subsection
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}subsubsection
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}paragraph
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}subparagraph
+\end{flushleft}
+
+
+\begin{flushleft}
+All sectioning commands take the same general form, e.g.,
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}chapter[toctitle]\{title\}
+\end{flushleft}
+
+
+\begin{flushleft}
+In addition to providing the heading title in the main text, the section
+\end{flushleft}
+
+
+\begin{flushleft}
+title can appear in two other places:
+\end{flushleft}
+
+
+\begin{flushleft}
+1. The table of contents.
+\end{flushleft}
+
+
+\begin{flushleft}
+2. The running head at the top of the page.
+\end{flushleft}
+
+
+\begin{flushleft}
+You may not want the same text in these places as in the main text. To
+\end{flushleft}
+
+
+\begin{flushleft}
+handle this, the sectioning commands have an optional argument toctitle
+\end{flushleft}
+
+
+\begin{flushleft}
+that, when given, specifies the text for these other places.
+\end{flushleft}
+
+
+\begin{flushleft}
+Also, all sectioning commands have *-forms that print title as usual, but
+\end{flushleft}
+
+
+\begin{flushleft}
+do not include a number and do not make an entry in the table of contents.
+\end{flushleft}
+
+
+
+
+
+5
+
+
+
+
+
+\begin{flushleft}
+\newpage
+For instance:
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}section*\{Preamble\}
+\end{flushleft}
+
+
+\begin{flushleft}
+The \ensuremath{\backslash}appendix command changes the way following sectional units are
+\end{flushleft}
+
+
+\begin{flushleft}
+numbered. The \ensuremath{\backslash}appendix command itself generates no text and does not
+\end{flushleft}
+
+
+\begin{flushleft}
+affect the numbering of parts.
+\end{flushleft}
+
+
+\begin{flushleft}
+The normal use of this command is something like
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}chapter\{A Chapter\}
+\end{flushleft}
+
+
+...
+
+
+\begin{flushleft}
+\ensuremath{\backslash}appendix
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}chapter\{The First Appendix\}
+\end{flushleft}
+
+
+\begin{flushleft}
+The secnumdepth counter controls printing of section numbers. The setting suppresses heading numbers at any depth $>$ level, where chapter is level
+\end{flushleft}
+
+
+\begin{flushleft}
+zero.
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}setcounter\{secnumdepth\}\{level\}
+\end{flushleft}
+
+
+
+
+
+4
+
+
+
+
+
+\begin{flushleft}
+Cross Reference
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+One reason for numbering things like figures and equations is to refer the
+\end{flushleft}
+
+
+\begin{flushleft}
+reader to them, as in \^{a}ÄúFigure 3 for more details.\^{a}Äù
+\end{flushleft}
+
+
+
+
+
+4.1
+
+
+
+
+
+\begin{flushleft}
+\ensuremath{\backslash}label\{key\}
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+A \ensuremath{\backslash}label command appearing in ordinary text assigns to key the number
+\end{flushleft}
+
+
+\begin{flushleft}
+of the current sectional unit; one appearing inside a numbered environment
+\end{flushleft}
+
+
+\begin{flushleft}
+assigns that number to key.
+\end{flushleft}
+
+
+\begin{flushleft}
+A key name can consist of any sequence of letters, digits, or punctuation
+\end{flushleft}
+
+
+\begin{flushleft}
+characters. Upper and lowercase letters are distinguished.
+\end{flushleft}
+
+
+
+
+
+6
+
+
+
+
+
+\begin{flushleft}
+\newpage
+To avoid accidentally creating two labels with the same name, it is common to use labels consisting of a prefix and a suffix separated by a colon or
+\end{flushleft}
+
+
+\begin{flushleft}
+period. Some conventionally-used prefixes:
+\end{flushleft}
+
+
+\begin{flushleft}
+ch
+\end{flushleft}
+
+
+\begin{flushleft}
+sec
+\end{flushleft}
+
+
+\begin{flushleft}
+fig
+\end{flushleft}
+
+
+\begin{flushleft}
+tab
+\end{flushleft}
+
+
+\begin{flushleft}
+eq
+\end{flushleft}
+
+
+
+
+
+4.2
+
+
+
+
+
+\begin{flushleft}
+for chapters
+\end{flushleft}
+
+
+\begin{flushleft}
+for lower-level sectioning commands
+\end{flushleft}
+
+
+\begin{flushleft}
+for figures
+\end{flushleft}
+
+
+\begin{flushleft}
+for tables
+\end{flushleft}
+
+
+\begin{flushleft}
+for equations
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+\ensuremath{\backslash}pageref\{key\}
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+The \ensuremath{\backslash}pageref \{ key \} command produces the page number of the place in
+\end{flushleft}
+
+
+\begin{flushleft}
+the text where the corresponding \ensuremath{\backslash}label \{ key \} command appears.
+\end{flushleft}
+
+
+
+
+
+4.3
+
+
+
+
+
+\begin{flushleft}
+\ensuremath{\backslash}ref\{key\}
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+The \ensuremath{\backslash}ref command produces the number of the sectional unit, equation,
+\end{flushleft}
+
+
+\begin{flushleft}
+footnote, figure, . . . , of the corresponding \ensuremath{\backslash}label command. It does not
+\end{flushleft}
+
+
+\begin{flushleft}
+produce any text, such as the word \^{a}ÄòSection\^{a}Äô or \^{a}ÄòFigure\^{a}Äô, just the bare number
+\end{flushleft}
+
+
+\begin{flushleft}
+itself.
+\end{flushleft}
+
+
+
+
+
+5
+
+
+
+
+
+\begin{flushleft}
+Fonts
+\end{flushleft}
+
+
+
+
+
+5.1
+
+
+
+
+
+\begin{flushleft}
+Font Styles
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+A few of the font styles which are useful are listed below
+\end{flushleft}
+
+
+\begin{flushleft}
+1. \ensuremath{\backslash}textrm (Roman)
+\end{flushleft}
+
+
+\begin{flushleft}
+2. \ensuremath{\backslash}textit (Italics)
+\end{flushleft}
+
+
+\begin{flushleft}
+3. \ensuremath{\backslash}textbf (Bold)
+\end{flushleft}
+
+
+\begin{flushleft}
+4. \ensuremath{\backslash}emph (Emphasis)
+\end{flushleft}
+
+
+\begin{flushleft}
+5. \ensuremath{\backslash}texttt (Typewriter)
+\end{flushleft}
+
+
+\begin{flushleft}
+6. \ensuremath{\backslash}textnormal (Normal font)
+\end{flushleft}
+
+
+7
+
+
+
+
+
+\begin{flushleft}
+\newpage
+Example to output text in bold we can type
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}textbf\{anything you type inside the curly braces will be outputed
+\end{flushleft}
+
+
+\begin{flushleft}
+in bold\}
+\end{flushleft}
+
+
+
+
+
+5.2
+
+
+
+
+
+\begin{flushleft}
+Font Sizes
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+The following standard type size commands are supported by LaTeX.
+\end{flushleft}
+
+
+\begin{flushleft}
+Table 1: Font Sizes
+\end{flushleft}
+
+
+\begin{flushleft}
+Command
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+\ensuremath{\backslash}Large
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+10pt
+\end{flushleft}
+
+
+5
+
+
+7
+
+
+7
+
+
+9
+
+
+10
+
+
+12
+
+
+14.4
+
+
+
+
+
+\begin{flushleft}
+\ensuremath{\backslash}LARGE
+\end{flushleft}
+
+
+
+
+
+17.28 17.28 20.74
+
+
+
+
+
+\begin{flushleft}
+\ensuremath{\backslash}tiny
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+\ensuremath{\backslash}scriptsize
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+\ensuremath{\backslash}footnotesize
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+\ensuremath{\backslash}small
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+\ensuremath{\backslash}normalize(default)
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+\ensuremath{\backslash}large
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+\ensuremath{\backslash}huge
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}Huge
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+11pt 12pt
+\end{flushleft}
+
+
+6
+
+
+6
+
+
+8
+
+
+9
+
+
+8
+
+
+8
+
+
+10
+
+
+10.95
+
+
+10.95
+
+
+12
+
+
+12
+
+
+14.4
+
+
+14.4 17.28
+
+
+
+
+
+20.74 20.74 24.88
+
+
+24.88 24.88 24.88
+
+
+
+
+
+\begin{flushleft}
+The commands as listed here are declaration forms. The scope of the
+\end{flushleft}
+
+
+\begin{flushleft}
+declaration form lasts until the next type style command or the end of the
+\end{flushleft}
+
+
+\begin{flushleft}
+current group.
+\end{flushleft}
+
+
+
+
+
+6
+
+
+
+
+
+\begin{flushleft}
+Images
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+To insert an image we first need to include a package called graphicx after
+\end{flushleft}
+
+
+\begin{flushleft}
+the documentclass as mentioned in section 2.1. To insert the image into the
+\end{flushleft}
+
+
+\begin{flushleft}
+PDF we have to use the following commands
+\end{flushleft}
+
+
+
+
+
+8
+
+
+
+
+
+\begin{flushleft}
+\newpage
+\ensuremath{\backslash}begin\{figure\}[h]
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}centering
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}caption\{Example Picture Created Using Dia\}
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}includegraphics[scale=0.7] \{img.png\}
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}end\{figure\}
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+Figures are objects that are not part of the normal text, and are instead
+\end{flushleft}
+
+
+\begin{flushleft}
+floated to a convenient place, such as the top of a page. Figures will not be
+\end{flushleft}
+
+
+\begin{flushleft}
+split between two pages.
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+Figure 1: Example Picture Created Using Dia
+\end{flushleft}
+
+
+
+
+
+7
+
+
+7.1
+
+
+
+
+
+\begin{flushleft}
+Tables
+\end{flushleft}
+
+
+\begin{flushleft}
+Multi Row Tables
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+To combine rows the package multirow must be imported with
+\end{flushleft}
+
+
+\begin{flushleft}
+in your preamble, then you can use the \ensuremath{\backslash}multirow command in your document:
+\end{flushleft}
+
+
+\begin{flushleft}
+\ensuremath{\backslash}usepackage\{multirow\}
+\end{flushleft}
+
+
+\begin{flushleft}
+The table below includes mathematical notations, which you can produce
+\end{flushleft}
+
+
+\begin{flushleft}
+by embedding the experession in \$ \$ delimiters. For subscript, use underscore
+\end{flushleft}
+
+
+\begin{flushleft}
+and for superscript, use carrot.
+\end{flushleft}
+
+
+
+
+
+9
+
+
+
+
+
+\begin{flushleft}
+\newpage
+Table 2: Example of Multi Row Table
+\end{flushleft}
+
+
+\begin{flushleft}
+Algorithms
+\end{flushleft}
+
+
+\begin{flushleft}
+Bubble Sort
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+Merge Sort
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+Quick Sort
+\end{flushleft}
+
+
+
+
+
+7.2
+
+
+
+
+
+\begin{flushleft}
+Time Complexity
+\end{flushleft}
+
+
+\begin{flushleft}
+Best Case : O(n)
+\end{flushleft}
+
+
+\begin{flushleft}
+Average Case : O(n2 )
+\end{flushleft}
+
+
+\begin{flushleft}
+Worst Case : O(n2 )
+\end{flushleft}
+
+
+\begin{flushleft}
+Best Case : O(n log2 (n))
+\end{flushleft}
+
+
+\begin{flushleft}
+Average Case : O(n log2 (n))
+\end{flushleft}
+
+
+\begin{flushleft}
+Worst Case : O(n log2 (n))
+\end{flushleft}
+
+
+\begin{flushleft}
+Best Case : O(n log2 (n))
+\end{flushleft}
+
+
+\begin{flushleft}
+Average Case : O(n log2 (n))
+\end{flushleft}
+
+
+\begin{flushleft}
+Worst Case : O(n2 )
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+Table of Figures
+\end{flushleft}
+
+
+\begin{flushleft}
+Table 3: Example of Table of Figures
+\end{flushleft}
+
+
+
+
+
+10
+
+
+
+
+
+\newpage
+8
+
+
+
+
+
+\begin{flushleft}
+Conclusion
+\end{flushleft}
+
+
+
+
+
+\begin{flushleft}
+Thus by using LaTeX we can create reports, articles etc on the fly without
+\end{flushleft}
+
+
+\begin{flushleft}
+worrying about the alignment, typeset etc making it very productive.LaTeX
+\end{flushleft}
+
+
+\begin{flushleft}
+has become a popular tools among students, teachers, research scholars etc
+\end{flushleft}
+
+
+\begin{flushleft}
+as it is a free software available on any Linux platform.
+\end{flushleft}
+
+
+
+
+
+11
+
+
+
+
+
+\newpage
+
+
+
+\end{document}

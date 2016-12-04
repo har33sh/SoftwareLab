@@ -1,0 +1,10 @@
+digraph M {
+entry -> "q=&r" 
+"q=&r" -> "p=q"
+"p=q" -> "p=*p" -> "s=q"
+"p=*p" -> "print p" 
+"print p"->"r=&s"
+"s=q"->"r=&s"
+"r=&s"->exit
+"r=&s"->"p=q"
+}

@@ -1,0 +1,7 @@
+digraph M {
+s0 -> "s1,s2" [label="tau"]
+"s1,s2" -> s2 -> s3
+s0 -> s3 -> s3
+s3 -> s4 [label="how"]
+s4 -> s0 [label="hallo"]
+}

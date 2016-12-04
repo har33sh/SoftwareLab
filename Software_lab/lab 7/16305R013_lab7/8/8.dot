@@ -1,0 +1,16 @@
+digraph G {
+a -> b;
+b -> c;
+c -> d [label="Yes"];
+c -> e [label="No"];
+e -> b;
+d -> f;
+
+a [ shape=polygon,sides=4,color="#688C20",style=filled,label="start"];
+b [ shape=polygon,sides=4,color="#950A54",skew=".4"style=filled,label="'Which is the\nbest subject'"];
+c [ shape=diamond,color="#9340A8" style=filled ;label="Does answer=\n`Computer Science'?"];
+d [ shape=polygon,sides=4,color="#950A54",skew=".4",style=filled,label="Output'\n`Of Course it is !' "];
+e [ shape=polygon,sides=4,color="#950A54",skew=".4",style=filled,label="Output'\nTry Again!'"];
+f [ shape=polygon,sides=4,color="#688C20",style=filled,label="stop"];
+
+}

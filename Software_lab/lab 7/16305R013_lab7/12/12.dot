@@ -1,0 +1,16 @@
+digraph N { End [shape=doublecircle]S -> P0 [label ="a"];
+P0 -> P1 [label ="b"];
+P1 -> End
+S -> P2 [label ="g"];
+P2 -> P3 [label ="h"];
+P3 -> End
+S -> P4 [label ="c"];
+P4 -> P4 [label ="d"];
+P4 -> P5 [label ="e"];
+P5 -> End
+S -> P6 [label ="b"];
+P7 -> P7 [label ="d"];
+P6 -> P7 [label ="d"];
+P7 -> P8 [label ="f"];
+P8 -> End
+}

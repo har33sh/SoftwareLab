@@ -1,0 +1,28 @@
+<html>
+
+<head>
+ <script type="text/javascript">
+	
+function onHover()
+{
+var logo = document.getElementById('img');
+logo.src = "img/2.png";
+}
+
+function offHover()
+{
+var logo = document.getElementById('img');
+logo.src = "img/3.png";
+} 
+</script>
+</head>
+<body>
+<div id="menu" >  
+  <a href="#" id="home">
+    <img id="img" src="img/3.png" alt="logo" onmouseover="onHover();" 
+      onmouseout="offHover();" />
+  </a>
+</div>
+</body>
+</html>
+

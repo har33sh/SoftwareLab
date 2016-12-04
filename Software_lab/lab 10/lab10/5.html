@@ -1,0 +1,130 @@
+
+<html>
+
+<head>
+ <script type="text/javascript">
+	document.onkeydown = function(e) {
+		switch (e.keyCode) {
+			case 37:
+				left();
+				break;
+			case 38:
+				up();
+				break;
+			case 39:
+				right();
+				break;
+			case 40:
+				down()
+				break;
+			}
+	};
+
+	x=16
+	s=0
+	function start(){
+		s=1;
+	}
+	function win(){
+		var w=1;
+		for (var i=1;i<=15;i++){
+			var x=parseInt (document.getElementById(i.toString()).innerHTML)
+			if(x!=i)
+				w=0;
+		}
+		if(w==1){
+			alert("You Won!!")
+			s=0
+		}
+	}
+        function up () {
+                upper=x-4;
+                if (upper<=0) return;
+                document.getElementById(x.toString()).style.backgroundColor= "#FF0000";
+                document.getElementById(upper.toString()).style.backgroundColor="#000000";
+		document.getElementById(x.toString()).innerHTML=document.getElementById(upper.toString()).innerHTML
+                x=upper;
+		if(s=="1")
+			win()
+        }
+
+	function down () {
+                upper = x+4;
+                if (upper>16) return;
+                document.getElementById(x.toString()).style.backgroundColor= "#FF0000";
+                document.getElementById(upper.toString()).style.backgroundColor="#000000";
+		document.getElementById(x.toString()).innerHTML=document.getElementById(upper.toString()).innerHTML
+                x=upper;
+ 		if(s=="1")
+			win()
+        }
+
+	function left () {
+                upper = x-1;
+                if (x%4==1) return;
+                document.getElementById(x.toString()).style.backgroundColor= "#FF0000";
+                document.getElementById(upper.toString()).style.backgroundColor="#000000";
+		document.getElementById(x.toString()).innerHTML=document.getElementById(upper.toString()).innerHTML
+                x=upper;
+ 		if(s=="1")
+			win()
+        }
+	function right () {
+                upper = x+1;
+                if (x%4==0) return;
+                document.getElementById(x.toString()).style.backgroundColor= "#FF0000";
+                document.getElementById(upper.toString()).style.backgroundColor="#000000";
+		document.getElementById(x.toString()).innerHTML=document.getElementById(upper.toString()).innerHTML
+                x=upper;
+ 		if(s=="1")
+			win()
+        } 
+</script>
+</head>
+
+<body>
+
+
+
+<table border="1"  style="width:300px; height:300px">
+ <tr>
+    <td id="1"  bgcolor="#FF0000"> 1</td>
+    <td id="2"  bgcolor="#F0000">2</td>
+    <td id="3"  bgcolor="#F0000">3</td>
+    <td id="4"  bgcolor="#F0000">4</td> 
+</tr>
+
+ <tr>
+    <td id="5"  bgcolor="#F0000"> 5</td>
+    <td id="6"  bgcolor="#F0000">6</td>
+    <td id="7"  bgcolor="#F0000">7</td>
+    <td id="8"  bgcolor="#F0000">8</td> 
+</tr>
+
+<tr>
+   <td id="9"  bgcolor="#F0000">  9</td>
+   <td id="10" bgcolor="#F0000">10</td>
+   <td id="11" bgcolor="#F0000">11</td>
+   <td id="12" bgcolor="#F0000">12  </td>
+</tr>
+
+<tr>
+    <td id="13" bgcolor="#F0000"> 13</td>
+    <td id="14" bgcolor="#F0000">14</td>
+    <td id="15" bgcolor="#F0000">15</td>
+    <td id="16" bgcolor="#00000">16</td>
+</tr>
+</table>
+
+<br>
+<table>
+       <tr> <td></td> <td align="center"> <input type="button" onclick="up()" value = "UP" /> </td> <td></td>
+	<tr> <td><input type="button" onclick="left()" value = "LEFT" /> </td> <td></td><td><input type="button" onclick="right()" value = "RIGHT" /></td><br>
+       <tr> <td></td> <td align="center"> <input type="button" onclick="down()" value = "DOWN" /> </td> <td></td>
+</table>
+<input type="button" onclick="start()" value = "Shuffle and then click here ! " /> 
+</body>
+
+
+</html>
+

@@ -1,0 +1,6 @@
+digraph M {
+initial -> executing [label="scheduled"]
+executing -> waiting [label="context swicthed"]
+executing -> terminated [label="process ended"]
+waiting -> executing [label="scheduled"]
+}

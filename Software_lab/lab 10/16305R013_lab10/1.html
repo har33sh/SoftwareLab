@@ -1,0 +1,37 @@
+<html>
+
+<head>
+
+<script type="text/javascript">
+		
+		function f() {
+			var s = document.forms["form1"]["v1"].value;
+			var x=true
+			
+			for (var i=0;i<s.length/2;i++)
+				if(s[i]!=s[s.length-1-i])
+					x=false;
+			
+			if(x==true)
+					alert("True");
+
+			else
+					alert("False")
+		}
+</script>
+
+</head>
+
+
+
+<body>
+	<form Id="form1" onsubmit="f()">
+		Enter a number : <br>
+		 <input type="text" name="v1">
+		<input type="submit" value="Go!"> 
+	</form>
+
+</body>
+
+</html>
+

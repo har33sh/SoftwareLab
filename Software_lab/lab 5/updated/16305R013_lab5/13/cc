@@ -1,0 +1,14 @@
+cat $1>t
+sed -i 's/[ .,:;"!]/ /g' t
+sed -i 's/[ .][a-z0-9]\+//g' t
+sed -i 's/[ ]/\n/g' t 
+sed -i /^$/d t
+tr '[A-Z]' '[a-z]' < t > t
+
+while read curline; do   
+   if grep $curline $2
+     echo "in"
+   else
+     echo "out"
+   fi 
+done < t

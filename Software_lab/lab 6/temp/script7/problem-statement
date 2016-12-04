@@ -1,0 +1,12 @@
+Given an input file:
+
+Write a script to count number of occurences of 
+every word in the file.
+
+1) Print a table of words and wordcounts.
+
+2) Give one shell script which uses the above program and
+generates sorted wordlist based on alphabetical order.
+
+3) Also give second shell script which generates sorted wordlist on
+wordcount.

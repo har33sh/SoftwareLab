@@ -1,0 +1,6 @@
+dot -Tpdf myfile.dot -o myfile.pdf
+
+if myfile is your .dot file format
+
+
+install graphviz package

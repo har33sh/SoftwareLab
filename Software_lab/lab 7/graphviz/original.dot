@@ -1,0 +1,33 @@
+digraph M {
+
+rankdir = LR  ;
+0->		"1, 2"[label="t"]
+
+1->		"3, 4"[label="t"]
+
+2->		"4, 5" [label="t"]
+
+3->		"6"  [label="s1"]
+
+4->
+5->		"7"  [label="s2"]
+
+6->		"8" [label="'eating1"]
+
+7->		"9"[label="'eating2"]
+
+8->		"10"[label="e1"]
+
+9->		"11"[label="e2"]
+
+10->	"12"[label="t"]
+
+11->		"13"[label="t"]
+
+12->		"14"[label="t"]
+
+13->		"14"[label="t"]
+
+14->		"1, 2"[label="t"]
+
+}

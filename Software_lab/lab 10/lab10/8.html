@@ -1,0 +1,76 @@
+
+<html>
+<head>
+    <title>Question 8</title>
+    <script type="text/javascript">
+    x=0;
+    gamesPlayed=0
+    color="#000000"
+    count=0
+    function move(me){
+        count+=1;
+	x=parseInt(me.id);
+	neighbour();
+	win=1
+	var check=document.getElementById("1".toString()).style.backgroundColor
+	for(var i=1;i<=16;i++){
+		if (document.getElementById(i.toString()).style.backgroundColor != check)			
+			win=0
+	}
+	if(win==1){
+		alert("Clicks :"+count+" You Won..!!Play again :)");
+		gamesPlayed+=1;		
+		    if(gamesPlayed%2==0)
+     			   color="#000000"
+    		    else
+        		   color="#FF0000"
+		count=0
+	}
+    }
+    function neighbour() {
+        up=x-4;
+	down=x+4;
+	right=x+1;
+	left=x-1;
+	toggle(x);
+	if(up>0) toggle(up);
+	if(down<=16) toggle(down);
+	if(left%4!=0) toggle(left);
+	if(right%4!=1) toggle(right);
+    }
+    function toggle(t){
+	document.getElementById(t.toString()).style.backgroundColor = color;
+    }
+    </script>
+</head>
+<body>
+    <table border="1" style="width:300px; height:300px">
+        <tr>
+            <td style="height:25%"> <button id="1" style="width:100%;height:100%;background:#FF0000" onclick="move(this)"></button></td>
+            <td><button id="2" style="width:100%;height:100%;background:#FF0000" onclick="move(this)"></button></td>
+            <td><button id="3" style="width:100%;height:100%;background:#FF0000" onclick="move(this)"></button></td>
+            <td><button id="4" style="width:100%;height:100%;background:#FF0000" onclick="move(this)"></button></td>
+        </tr>
+        <tr>
+            <td style="height:25%"><button id="5" style="width:100%;height:100%;background:#FF0000" onclick="move(this)"></button></td>
+            <td><button id="6" style="width:100%;height:100%;background:#FF0000" onclick="move(this)"></button></td>
+            <td><button id="7" style="width:100%;height:100%;background:#FF0000" onclick="move(this)"></button></td>
+            <td><button id="8" style="width:100%;height:100%;background:#FF0000" onclick="move(this)"></button></td>
+        </tr>
+        <tr>
+            <td style="height:25%"><button id="9" style="width:100%;height:100%;background:#FF0000" onclick="move(this)"></button></td>
+            <td><button id="10" style="width:100%;height:100%;background:#FF0000" onclick="move(this)"></button></td>
+            <td><button id="11" style="width:100%;height:100%;background:#FF0000" onclick="move(this)"></button></td>
+            <td><button id="12" style="width:100%;height:100%;background:#FF0000" onclick="move(this)"></button></td>
+        </tr>
+        <tr>
+            <td style="height:25%"><button id="13" style="width:100%;height:100%;background:#FF0000" onclick="move(this)"></button></td>
+            <td><button id="14" style="width:100%;height:100%;background:#FF0000" onclick="move(this)"></button></td>
+            <td><button id="15" style="width:100%;height:100%;background:#FF0000" onclick="move(this)"></button></td>
+            <td><button id="16" style="width: 100%; height: 100%; background: #FF0000" onclick="move(this)"></button></td>
+        </tr>
+    </table>
+</body>
+
+</html>
+

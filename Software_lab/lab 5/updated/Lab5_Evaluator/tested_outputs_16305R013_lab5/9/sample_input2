@@ -1,0 +1,15 @@
+// Author: Xyz
+
+#include <stdio.h>
+
+int main()
+{
+    // Starting of the loop
+    int x;
+    /* The loop goes while x < 10, and x increases by one every loop*/
+    for ( x = 0; x < 10; x++ ) {
+        /* Keep in mind that the loop condition checks */   
+        printf( "%d\n", x );
+    }
+    getchar();
+}

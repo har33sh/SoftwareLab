@@ -1,0 +1,49 @@
+<html>
+<head>
+<script type='text/javascript'> 
+n=0;
+
+function sort()
+{
+        array=[]
+        for(i=1;i<=n;i++)
+                array.push(parseInt(document.getElementById("inpNo"+i).value));
+        array.sort();
+        for(i=1;i<=n;i++)
+                document.getElementById("inpNo"+i).value=array[i-1];
+	document.getElementById('lblHead').innerHTML="<br/>Sorted List is";
+}
+
+function Generate()
+{
+        inp=document.getElementById('txtInput').value;
+	
+        n=parseInt(inp);
+        if(n!=0)
+        {
+                document.getElementById('lblHead').innerHTML="<br/>Enter the numbers";
+                gen="";
+		for(i=1;i<=n;i++)
+               		 gen+="Number " +i+ ": <input id='inpNo"+i+"' type='text'/><br/>"
+                gen+="<input name='btnSort' type='button' value='Sort' onclick='return sort();'/>"
+                document.getElementById("lblInputs").innerHTML=gen;    
+                document.getElementById("lblSortedList").innerHTML=" "; 
+        }
+        else
+                alert("Please enter a number >0")
+}
+
+
+</script>
+</head>
+<body>
+<form style="">
+Enter a number <input id="txtInput" name="fields" type="text"/>
+<input name="btnGenerate" type="button"  value="Generate" onclick="return Generate();"/>
+<label id="lblHead"></label></br>
+<label id="lblInputs"></label></br>
+<label id="lblSortedList"></label></br>
+</form>
+</body>
+</html>
+

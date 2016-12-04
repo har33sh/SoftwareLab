@@ -1,0 +1,59 @@
+<html>
+   <head>
+       <script type="text/javascript">
+		i=1
+		function Quest(){
+			if(i%2==0)
+				document.getElementById('guess').innerHTML="Guess where is :  Pen"
+			if(i%3==0)
+				document.getElementById('guess').innerHTML="Guess where is : Apple"
+			if(i%4==1)
+				document.getElementById('guess').innerHTML="Guess where is : Ohh"
+			if(i%5==1)
+				document.getElementById('guess').innerHTML="Guess where is : Apple Pen"
+			i+=1
+		}
+                function f(me) {
+			Quest()
+			for (var i=1;i<=4;i++){
+				var elem=document.getElementById("img"+i);
+				elem.src="img/0.png";
+			}
+			var elem=document.getElementById("img"+me.id);
+			elem.src="img/"+me.id+".png"
+                }
+       </script>
+   </head>
+   <body>
+	1080p Resolution Needed for viewing :D
+	<br/>
+	<br/>
+	<label id="guess">Please watch Apple Pen PineApple Pen before playing :P</label>
+	<br/>
+
+	<table>
+	  <tr>
+	    <td><input id="1" type="radio" name="r" onClick="f(this)">Image 1 </radio> </td>
+	    <td><input id="2" type="radio" name="r" onClick="f(this)">Image 2 </radio> </td>
+	  </tr>
+	  <tr>
+	    <td><input id ="3" type="radio" name="r" onClick="f(this)">Image 3 </radio></td>
+	    <td> <input id="4" type="radio" name="r" onClick="f(this)">Image 4</radio> </td>
+	  </tr>
+	</table>
+
+	<table>
+	  <tr>
+	    <td><img id="img1" src="img/0.png" alt="logo"/></td>
+	    <td><img id="img2" src="img/0.png" alt="logo"/></td>
+	  </tr>
+	  <tr>
+	    <td><img id="img3" src="img/0.png" alt="logo" /></td>
+	    <td><img id="img4" src="img/0.png" alt="logo" /></td>
+	  </tr>
+	</table>
+
+
+   </body>
+</html>
+

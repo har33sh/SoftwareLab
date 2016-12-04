@@ -1,0 +1,6 @@
+while read curline; do
+   
+   echo $curline
+
+done < $2
+

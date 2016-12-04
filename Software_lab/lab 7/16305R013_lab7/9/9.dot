@@ -1,0 +1,41 @@
+digraph  G  {
+a  ->  m;
+a  ->  n;
+n  ->  c;
+m  ->  b;
+b  ->  o;
+b  ->  p;
+p  ->  e;
+o  ->  d;
+d  ->  q;
+d  ->  r;
+q  ->  f;
+r  ->  g;
+g  ->  h;
+h  ->  i;
+i  ->  j;
+j  ->  k;
+k->  d;
+a  [shape=diamond,style="rounded",label="Do  you  have\nassignment?"];
+b  [shape=diamond,style="rounded",label="Is  there  something\nelse  you'd  rather  do??"];
+c  [shape=polygon,sides=4,style="rounded",label="You  are  lying"];
+d  [shape=diamond,style="rounded",label="Is  assignment  due  in\nless  than  12  hours?"];
+e  [shape=polygon,sides=4,style="rounded",label="Get  a  life"];
+f  [shape=polygon,sides=8,peripheries=3;style="filled,rounded",label="Start  Working"];
+g  [shape=polygon,sides=4,style="rounded",label="Watch  Tv"];
+h  [shape=polygon,sides=4,style="rounded",label="Check  your  emails"];
+i  [shape=polygon,sides=4,style="rounded",label="Do  facebook"];
+j  [shape=polygon,sides=4,style="rounded",label="Have  snacks"];
+k  [shape=diamond,style="rounded",label="Check  what  time  it  is?"];
+
+
+
+m  [shape=polygon,sides=4,color="#D51F1D",style=filled,label="yes"];
+n  [shape=polygon,sides=4,color="#3DDD3E",style=filled  ;label="no"];
+o  [shape=polygon,sides=4,color="#D51F1D",style=filled,label="yes"];
+p  [shape=polygon,sides=4,color="#3DDD3E",style=filled,label="no"];
+q  [shape=polygon,sides=4,color="#D51F1D",style=filled,label="yes"];
+r  [shape=polygon,sides=4,color="#3DDD3E",style=filled,label="no"];
+}
+
+
